@@ -1,0 +1,19 @@
+ALGORITHM count_ch
+VAR
+    sent :STRING;  //sentence 
+    count1 :INTEGER :=0;  //The length of the sentence (the number of characters).
+    count2 :INTEGER :=0; //The number of words in the sentence
+    count3 : INTEGER :=0; //The number of vowels in the sentence.
+
+BEGIN
+    FOR i FROM 0 TO len(sent) DO 
+     if (sent[i] != ' ') THEN
+        count1 = count1 + 1;  
+    if (sent[i]>= 'A' && sent(i) <= 'Z') || (sent(i) >= 'a' && sent(i) <= 'z') THEN
+        count2 = count2 + 1;
+    if (sent[i] ==  a,e,i,o,u) THEN
+        count3 = count3 + 1;
+
+ END_FOR
+ Write(count1,count2,count3)
+END
