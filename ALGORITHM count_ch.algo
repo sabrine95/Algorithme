@@ -7,11 +7,11 @@ VAR
 
 BEGIN
     FOR i FROM 0 TO len(sent) DO 
-     if (sent[i] != ' ') THEN
+    IF (sent[i] != ' ') THEN
         count1 = count1 + 1;  
-    if (sent[i]>= 'A' && sent(i) <= 'Z') || (sent(i) >= 'a' && sent(i) <= 'z') THEN
+    IF (sent[i]>= 'A' && sent(i) <= 'Z') || (sent(i) >= 'a' && sent(i) <= 'z') THEN
         count2 = count2 + 1;
-    if (sent[i] ==  a,e,i,o,u) THEN
+    IF(sent[i] ==  a,e,i,o,u) THEN
         count3 = count3 + 1;
 
  END_FOR

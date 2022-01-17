@@ -1,0 +1,23 @@
+ALGORITHM Set1
+VAR
+    Set1 : ARRAY_OF INTEGER; // declaring the array and define its length.
+    i : INTEGER;
+    Set2 : ARRAY_OF INTEGER; // declaring the array and define its length.
+    j : INTEGER;
+    sum : ARRAY_OF INTEGER;
+
+BEGIN
+    Set1:={3, 1, 7, 9};
+    Set2:={2, 4, 1, 9, 3};
+    sum:=0;
+    FOR i FROM 0 TO Set1.length+1 STEP 1 DO
+	FOR j FROM 0 TO Set2.length-1 STEP 1 DO
+    IF (Set1[i] != Set2[j]) THEN
+    sum = Set1[i] + Set2[j]
+    i := i+1
+    j := j+1
+END_IF
+END_FOR
+END_FOR
+    Write(sum[i+j])
+END

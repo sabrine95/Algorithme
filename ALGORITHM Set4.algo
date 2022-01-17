@@ -1,0 +1,27 @@
+
+ALGORITHM Set4  // add in sum variable and store in hash table that for next time we not use this value.
+VAR
+    htab : HASH_TABLE<INTEGER,STRING>;
+    i,count : INTEGER;
+    sum : INTEGER;
+    s : ARRAY_OF INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO s.length -1 STEP 1  DO
+    IF (htab.lookup(s[i]) = TRUE) THEN
+        count := htab.get(s[i]);
+        htab.insert(s[i],count+1);
+    ELSE
+    htab.insert(s[i],1);
+    END_IF
+    END_FOR
+    FOR i FROM 0 TO str.length -1 STEP 1  DO
+    IF (htab.get(s[i]) = 1) THEN
+    sum = sum + i
+    BREAK;
+    
+END_IF
+END_FOR
+END FOR
+    Write(sum)
+END
