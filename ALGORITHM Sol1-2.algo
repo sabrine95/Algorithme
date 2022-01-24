@@ -7,7 +7,7 @@ VAR
     s : ARRAY_OF INTEGER;
 
 BEGIN
-    FOR i FROM 0 TO s.length -1 STEP 1  DO
+    FOR i FROM 0 TO s.length-1 STEP 1  DO
     IF (htab.lookup(s[i]) = TRUE) THEN
         count := htab.get(s[i]);
         htab.insert(s[i],count+1);
@@ -15,7 +15,7 @@ BEGIN
     htab.insert(s[i],1);
     END_IF
     END_FOR
-    FOR i FROM 0 TO str.length -1 STEP 1  DO
+    FOR i FROM 0 TO str.length-1 STEP 1  DO
     IF (htab.get(s[i]) = 1) THEN
     sum = sum + i
     BREAK;
